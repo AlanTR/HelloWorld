@@ -1,0 +1,14 @@
+{
+  "name": "hexo",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.1.0"
+  },
+  "dependencies": {
+    "hexo-migrator-rss": "0.0.3",
+    "hexo-generator-sitemap": "0.0.6",
+    "hexo-generator-feed": "0.0.8"
+  }
+}

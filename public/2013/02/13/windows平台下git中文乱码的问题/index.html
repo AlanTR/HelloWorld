@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Windows平台下git中文乱码的问题 | 乌鸦的小木屋</title>
+  <meta name="author" content="AlanTR">
+  
+  <meta name="description" content="你想发财吗?你想一夜成名么?你想交桃花运吗?你想永葆青春吗?别做梦了。好好学习吧!">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+  <script src="http://vjs.zencdn.net/c/video.js"></script>
+
+  <script src="/audiojs/audio.min.js"></script>
+
+  <meta property="og:title" content="Windows平台下git中文乱码的问题"/>
+  <meta property="og:site_name" content="乌鸦的小木屋"/>
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="乌鸦的小木屋" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38467519-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">乌鸦的小木屋</a></h1>
+  <h2><a href="/">努力学习……啊啊啊好多不会的！</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="https://github.com/AlanTR">Github</a></li>
+    
+      <li><a href="http://user.qzone.qq.com/772110821/main">Q-zone</a></li>
+    
+      <li><a href="http://www.renren.com/313182832/profile">Renren</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-02-13T12:38:13.000Z"><a href="/2013/02/13/windows平台下git中文乱码的问题/">Feb 13 2013</a></time>
+      
+      
+  
+    <h1 class="title">Windows平台下git中文乱码的问题</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>进入git安装目录，改一下配置就可以基本解决：
+1、etc\gitconfig：</p>
+<notextile><blockquote><p>[gui]
+     encoding = utf-8
+[i18n]
+     commitencoding = gbk
+[svn]
+     pathnameencoding = gbk</p>
+<footer></footer></blockquote></notextile>
+
+<p>说明：打开 Git 环境中的中文支持。pathnameencoding设置了文件路径的中文支持。
+<span id="more"></span>
+2、etc\git-completion.bash：</p>
+<notextile><blockquote><p>alias ls=&#39;ls --show-control-chars --color=auto&#39;</p>
+<footer></footer></blockquote></notextile>
+
+<p>说明：使得在 Git Bash 中输入 ls 命令，可以正常显示中文文件名。</p>
+<p>3、etc\inputrc：</p>
+<notextile><blockquote><p>set output-meta on set convert-meta off</p>
+<footer></footer></blockquote></notextile>
+
+<p>说明：使得在 Git Bash 中可以正常输入中文，比如中文的 commit log。</p>
+<p>4、etc\profile：</p>
+<notextile><blockquote><p>export LESSCHARSET=iso8859    #或者utf-8、gbk</p>
+<footer></footer></blockquote></notextile>
+
+<p>说明：$ git log 命令不像其它 vcs 一样，n 条 log 从头滚到底，它会恰当地停在第一页，按 space 键再往后翻页。这是通过将 log 送给 less 处理实现的。以上即是设置 less 的字符编码，使得 $ git log 可以正常显示中文。其实，它的值不一定要设置为 utf-8，比如 latin1 也可以……。还有个办法是 $ git –no-pager log，在选项里禁止分页，则无需设置上面的选项。</p>
+<p>转自<a href="http://blog.csdn.net/jizhengjieing/article/details/6799211">jizhengjieing的专栏</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/笔记/">笔记</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Git/">Git</a>, <a href="/tags/版本控制/">版本控制</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+<div class="search">
+  <form action="http://google.com/search" method="get" accept-charset="utf-8">
+    <input type="text" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:alantr.tk">
+  </form>
+</div>
+
+
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/历程/">历程</a><small>1</small></li>
+  
+    <li><a href="/categories/笔记/">笔记</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/tags/其实我是来测试的/">其实我是来测试的</a><small>2</small></li>
+  
+    <li><a href="/tags/版本控制/">版本控制</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+<a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=6d0815d6-d5ed-40e3-b3a4-b6fd5af95db4&amp;style=3&amp;fs=4&amp;textcolor=#fff&amp;bgcolor=#19D&amp;text=分享到"></script>
+
+<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=3016098621&verifier=655ac839&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 AlanTR
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'alantr';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
