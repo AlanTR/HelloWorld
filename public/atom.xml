@@ -4,13 +4,35 @@
   <subtitle><![CDATA[努力学习……啊啊啊好多不会的！]]></subtitle>
   <link href="http://alantr.tk/atom.xml" rel="self"/>
   <link href="http://alantr.tk"/>
-  <updated>2013-02-15T02:35:54.822Z</updated>
+  <updated>2013-02-21T08:07:07.910Z</updated>
   <id>http://alantr.tk/</id>
   <author>
     <name><![CDATA[AlanTR]]></name>
     <email><![CDATA[alantheraven@gmail.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[Steve Jobs vs Bill Gates.  Epic Rap Battles of History Season 2]]></title>
+    <link href="http://alantr.tk/2013/02/18/steve-jobs-vs-bill-gates.--epic-rap-battles-of-history-season-2/"/>
+    <id>http://alantr.tk/2013/02/18/steve-jobs-vs-bill-gates.--epic-rap-battles-of-history-season-2/</id>
+    <published>2013-02-18T10:33:10.000Z</published>
+    <updated>2013-02-21T08:06:50.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://www.youtube.com/">Youtube</a>上面有很多很多很好玩的视频。可惜中国在网络访问上加了一些&quot;限制&quot;(大家懂的)，所以把那上面的视频下载下来转存一下与大家分享~~</p>
+<embed src="http://player.youku.com/player.php/sid/XNTE1NzgxNDc2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+
+
+
+
+<span id="more"></span>
+
+<p>PS：上传到优酷实在太郁闷了，由于不是每个人都有装<a href="http://player.opengg.me/">反优酷广告的插件</a>，所以看的时候还要忍受广告。如果大家有什么上传之后还可以提取文件
+地址的网站,也跟我说一下呗？</p>
+<p>这首歌的音频文件可以在<a href="http://bit.ly/KzLBGB">这里</a>下载。</p>
+]]></content>
+    <category scheme="http://alantr.tk/tags/好玩的视频/" term="好玩的视频"/>
+    <category scheme="http://alantr.tk/tags/音乐/" term="音乐"/>
+    <category scheme="http://alantr.tk/tags/From-Youtube/" term="From Youtube"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Windows平台下git中文乱码的问题]]></title>
     <link href="http://alantr.tk/2013/02/13/windows平台下git中文乱码的问题/"/>
@@ -68,7 +90,7 @@
     <link href="http://alantr.tk/2013/02/12/hello-world/"/>
     <id>http://alantr.tk/2013/02/12/hello-world/</id>
     <published>2013-02-12T02:48:08.000Z</published>
-    <updated>2013-02-14T09:22:27.000Z</updated>
+    <updated>2013-02-18T10:28:56.000Z</updated>
     <content type="html"><![CDATA[<h1>测试开始</h1>
 <p>People die. Things decay.Everything that seemed so solid is meaningless.All that left is gestures we make.Gestures and air, that&#39;s what we remember.</p>
 <p>We remember what we choose.</p>
@@ -105,11 +127,12 @@ was pulled out from under me
  so I was forced
 to look forward.
 I had to... there was no going back</p>
-<video id="my_video_1" class="video-js vjs-default-skin" controls
+<p><video id="my_video_1" class="video-js vjs-default-skin" controls
   preload="auto" width="640" height="264" poster="my_video_poster.png"
   data-setup="{}">
-  <source src="http://58.56.160.17/youku/67750F70CEB417F9928F44C01/0300080200511626889DD600A4CDFE0BB354DC-A12D-3DC5-D778-E8AC4DCA4E18.mp4" type='video/mp4'>
-</video>
+  <source src="http://122.228.252.137/a77b08f73043d7d-1361028546-2095617481/data9/hc.yinyuetai.com/uploads/videos/common/81E4013CD2DA8155357DDB38EAF84150.flv" type='video/flv'>
+</video></p>
+<embed src="http://player.youku.com/player.php/sid/XNTE0MTMxNjg0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 
 
 

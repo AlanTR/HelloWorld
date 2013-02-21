@@ -59,8 +59,9 @@ I had to... there was no going back
 <video id="my_video_1" class="video-js vjs-default-skin" controls
   preload="auto" width="640" height="264" poster="my_video_poster.png"
   data-setup="{}">
-  <source src="http://58.56.160.17/youku/67750F70CEB417F9928F44C01/0300080200511626889DD600A4CDFE0BB354DC-A12D-3DC5-D778-E8AC4DCA4E18.mp4" type='video/mp4'>
+  <source src="http://122.228.252.137/a77b08f73043d7d-1361028546-2095617481/data9/hc.yinyuetai.com/uploads/videos/common/81E4013CD2DA8155357DDB38EAF84150.flv" type='video/flv'>
 </video>
+<embed src="http://player.youku.com/player.php/sid/XNTE0MTMxNjg0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 		
 		
 		
